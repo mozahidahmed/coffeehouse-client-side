@@ -1,8 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import './Menu.css'
 
-const MenuOne = ({menu}) => {
-    const {name,img,price}=menu;
+const MenuOne = ({menus,handleAddToCart}) => {
+    const {name,img,price}=menus;
+
+
+
+
     return (
         <div className='mt-12'>
            <div class="card w-96 bg-white shadow-xl moza-cart">
@@ -17,9 +23,12 @@ const MenuOne = ({menu}) => {
   </figure>
   <div class="card-body items-center text-center">
     <h2 class="card-title">{name}</h2>
-    <p className="font-bold">$: {price}</p>
+    <p className="font-bold">$:{price}</p>
     <div class="card-actions">
-      <button class="btn btn-primary">Add to Cart <i className='fas fa-shopping-cart text-white-700 px-1'></i></button>
+     <Link to="/order">
+
+     <button class="btn btn-primary">Add to Cart <i className='fas fa-shopping-cart text-white-700 px-1'></i></button>
+     </Link>
     </div>
   </div>
 </div>
