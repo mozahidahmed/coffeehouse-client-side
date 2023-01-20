@@ -1,1 +1,1 @@
-<h6>Start Projects with Redux/h6>
+<h6>Start Projects with Redux </h6>
